@@ -1,0 +1,106 @@
+/*-----------------------------------------------------------*/
+/*Typically, it's a good idea to start with mobile first */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.img-banner {
+    display: none;
+}
+
+.img-info {
+    width: 100%;
+}
+
+.img-info h2 {
+    padding: 30px 30px 20px;
+    font-family: arial;
+    font-size: 50px;
+    color: #111;
+    line-height: 44px;
+}
+
+.img-info p {
+    padding: 0px 30px 20px;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+}
+
+.img-bloodAngels {
+    width: 100%;
+}
+
+/*-----------------------------------------------------------*/
+
+/*The below css code is actually for when the width becomes at least 768 px
+  This means it is the typical iPad size.
+  Any css that is not explicitly included below will inherit the same css attributes
+  from the above section.
+  
+  For example, .img-info h2 only contains padding. But it will still inherit the details
+  from above which include: font-family, font-size, color, line-height.
+
+  Ie., only the padding will change when the min-width changes too
+  
+  */
+@media only screen and (min-width: 768px) {
+    .img-banner {
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .img-info h2 {
+        padding: 20px 0px 0px;
+    }
+    
+    .img-info p {
+        padding: 20px 0px 0px;
+    }
+
+    .img-bloodAngels {
+        padding-top: 5px;
+    }
+}
+
+/*-----------------------------------------------------------*/
+
+/*The below css code is actually for when the width becomes at least 1000px, ie. a desktop
+    This inherits from the previous section above (the iPad section)
+  */
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        width: 1000px;
+    }
+
+    .img-info {
+        width: 50%;
+        float: right;
+    }
+
+    .img-bloodAngels {
+        padding-top: 0px;
+        width: 50%;
+        float: left;
+    }
+
+    .img-info h2 {
+        padding: 20px 0px 0px 30px;
+    }
+    
+    .img-info p {
+        padding: 20px 0px 0px 30px;
+    }
+}
